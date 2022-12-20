@@ -1,18 +1,31 @@
 import companyLogo from '../assets/company-logo.svg';
-import dropdownArrowImg from '../assets/dropdown-nav-icon.png';
+import dropdownArrowImg from '../assets/dropdown-nav-icon.svg';
+import test from '../assets/test.svg';
 import '../components/_navbar.scss';
 
 const Home: React.FC = () => {
   
   return (
     <nav className="nav">
-        <section className="left-nav-content">
-            <img src={companyLogo} className="company-logo"></img>
-            <span>Services</span>
-            <span>Health & Wellness</span>
-            <span>Resources</span>
-            <span>Help Center & Safety</span>
-        </section>
+            <ul className="left-nav-content">
+                <img src={companyLogo} className="company-logo"></img>
+                <li>
+                    <span>Services</span>
+                </li>
+                    <img src={dropdownArrowImg} className="dropdown-arrow"></img>
+                <li>
+                    <span>Health & Wellness</span>
+                </li>
+                    <img src={dropdownArrowImg} className="dropdown-arrow"></img>
+                <li>
+                    <span>Resources</span>
+                </li>
+                    <img src={dropdownArrowImg} className="dropdown-arrow"></img>
+                <li>
+                    <span>Help Center & Safety</span>
+                </li>
+                    <img src={dropdownArrowImg} className="dropdown-arrow"></img>
+            </ul>
 
         <section className="right-nav-content">
             <img src={companyLogo}></img>

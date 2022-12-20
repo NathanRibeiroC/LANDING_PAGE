@@ -12,23 +12,67 @@ $navbar-font-color: #474747;
     align-items: center;
 }
 
+@keyframes border_anim {
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 50%;
+	}
+}
+
 .nav{
     @include align-flex-center();
     background-color: $background-color;
-    margin-top: 1em;
+    margin: 0;
+    margin-top: 0;
     justify-content: space-between;
-
+    position: fixed;
+    width: 100%;
+    height: 6em;
+    top: 0;
+    left:0;
+    
     .left-nav-content{
         @include align-flex-center();
         @include nav-font();
+        list-style: none;
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
 
         .company-logo{
             margin-right: 1em;
         }
-
-        span:nth-child(n+2):nth-last-child(n+2){
+                
+        .dropdown-arrow{
+            margin-left: 1em;
             margin-right: 1em;
         }
+
+        li{
+            @include align-flex-center();
+            display: inline-block;
+            position: relative;
+        }
+
+        li::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: -1em;
+            left: 0;
+            background-color: #0087ca;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+          }
+          
+          li:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+          }
     }
 
     .right-nav-content{
