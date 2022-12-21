@@ -1,0 +1,26 @@
+@use "./navbar";
+
+$h1-font-size: 20px;
+$h1-font-color:#3F3634;
+$h2-font-size: 18px;
+$h2-font-color:#8C8482;
+
+ul{
+    @include navbar.align-flex-center();
+    justify-content: space-around;
+    list-style-type: none;
+    height: navbar.$navbar-height*4;
+    li{
+        top: 1px;
+    }
+
+    h1{
+        color: $h1-font-color;
+        font-size: $h2-font-size;
+    }
+    
+    h2{
+        color: $h2-font-color;
+        font-size: $h2-font-size;
+    }
+}

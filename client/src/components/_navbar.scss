@@ -1,10 +1,10 @@
 $background-color: #FFFFFF;
 $navbar-font-color: #474747;
+$navbar-height: 6em;
 
 @mixin nav-font($font-color: $navbar-font-color){
     color: $font-color;
     font-size: 16px;
-    font-family: 'Muli', 'Helvetica', sans-serif, system-ui;
 }
 
 @mixin align-flex-center(){
@@ -29,7 +29,7 @@ $navbar-font-color: #474747;
     justify-content: space-between;
     position: fixed;
     width: 100%;
-    height: 6em;
+    height: $navbar-height;
     top: 0;
     left:0;
     
@@ -39,7 +39,6 @@ $navbar-font-color: #474747;
         list-style: none;
         margin: 0;
         height: 100%;
-        overflow: hidden;
 
         .company-logo{
             margin-right: 1em;

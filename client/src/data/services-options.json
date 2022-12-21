@@ -1,0 +1,32 @@
+[
+    {
+        "img_file_name": "../assets/cripto-icon.png",
+        "main_text": "Exchange",
+        "secondary_test": "Daily rates"
+    },
+    {
+        "img_file_name": "cripto-icon.svg",
+        "main_text": "Crypto",
+        "secondary_test": "Crypto trends"
+    },
+    {
+        "img_file_name": "company-logo.svg",
+        "main_text": "Forex",
+        "secondary_test": "Forex rates"
+    },
+    {
+        "img_file_name": "company-logo.svg",
+        "main_text": "Stocks",
+        "secondary_test": "Stocks Options"
+    },
+    {
+        "img_file_name": "company-logo.svg",
+        "main_text": "Market",
+        "secondary_test": "Market Options"
+    },
+    {
+        "img_file_name": "company-logo.svg",
+        "main_text": "Partners",
+        "secondary_test": "Get Affiliated Today"
+    }
+]

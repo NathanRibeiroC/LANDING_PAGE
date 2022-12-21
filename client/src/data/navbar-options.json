@@ -1,7 +1,0 @@
-{
-    "services": {
-        "imgs":["company-logo.svg","company-logo.svg","company-logo.svg","company-logo.svg","company-logo.svg","company-logo.svg"],
-        "main-text":["Exchange","Crypto","Forex","Stocks","Market","Partners"],
-        "secondary-test":["Daily rates","Crypto trends","Forex rates","Stocks Options","Market Options","Get Affiliated Today"]
-    }
-}

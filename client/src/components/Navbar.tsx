@@ -1,6 +1,5 @@
 import companyLogo from '../assets/company-logo.svg';
 import dropdownArrowImg from '../assets/dropdown-nav-icon.svg';
-import test from '../assets/test.svg';
 import '../components/_navbar.scss';
 
 const Home: React.FC = () => {
