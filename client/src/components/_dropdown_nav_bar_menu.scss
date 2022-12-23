@@ -5,22 +5,26 @@ $h1-font-color:#3F3634;
 $h2-font-size: 18px;
 $h2-font-color:#8C8482;
 
-ul{
+.dropdown--nav{
     @include navbar.align-flex-center();
     justify-content: space-around;
     list-style-type: none;
-    height: navbar.$navbar-height*4;
+    display: relative;
+    height: navbar.$navbar-height;
+    background-color: white;
+    margin: 0;
+    padding: navbar.$navbar-height*.3 0 navbar.$navbar-height*.3 0;
     li{
         top: 1px;
-    }
 
-    h1{
-        color: $h1-font-color;
-        font-size: $h2-font-size;
-    }
-    
-    h2{
-        color: $h2-font-color;
-        font-size: $h2-font-size;
+        h1{
+            color: $h1-font-color;
+            font-size: $h2-font-size;
+        }
+        
+        h2{
+            color: $h2-font-color;
+            font-size: $h2-font-size;
+        }
     }
 }
