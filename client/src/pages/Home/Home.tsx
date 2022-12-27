@@ -4,13 +4,20 @@ import DropdownNavbarMenu from "../../components/DropdownNavbarMenu";
 import Abc from "../../components/Abc";
 import SecondNavbar from "../../components/SecondNav";
 
-const Home: React.FC = () => {
+const Home = () => {
+
+  const [isDropdownNavActive, setIsDropdownNavActive] = useState<{
+    servicesDropdown: boolean;
+    healthAndWellnessDropdown: boolean;
+  }>({
+    servicesDropdown: false,
+    healthAndWellnessDropdown: false,
+  });
 
   return (
     <React.Fragment>
-        {/* <MainNavbar></MainNavbar>  */}
-        {/* <Abc></Abc> */}
-        <SecondNavbar></SecondNavbar>
+        <SecondNavbar setIsDropdownNavActive={setIsDropdownNavActive}></SecondNavbar>
+        {isDropdownNavActive.servicesDropdown ? <DropdownNavbarMenu setIsDropdownNavActive={setIsDropdownNavActive}></DropdownNavbarMenu> : ""}
     </React.Fragment>
   );
 };

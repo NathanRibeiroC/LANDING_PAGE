@@ -1,21 +1,22 @@
-@use "./navbar";
-
 $h1-font-size: 20px;
 $h1-font-color:#3F3634;
 $h2-font-size: 18px;
 $h2-font-color:#8C8482;
 
 .dropdown--nav{
-    @include navbar.align-flex-center();
+    display: flex;
+    align-items: center;
     justify-content: space-around;
     list-style-type: none;
     display: relative;
-    height: navbar.$navbar-height;
     background-color: white;
+    height: 10em;
     margin: 0;
-    padding: navbar.$navbar-height*.3 0 navbar.$navbar-height*.3 0;
+    padding: 3em 0 0 0;
+
     li{
         top: 1px;
+        padding: .3em;
 
         h1{
             color: $h1-font-color;
@@ -26,5 +27,10 @@ $h2-font-color:#8C8482;
             color: $h2-font-color;
             font-size: $h2-font-size;
         }
+    }
+
+    li:hover{
+        background-color: aquamarine;
+        border-radius: 5%;
     }
 }

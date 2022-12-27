@@ -1,12 +1,19 @@
+import {Dispatch, SetStateAction}  from "react";
 import menuOptions from '../data/services-options.json';
 import '../components/_dropdown_nav_bar_menu.scss';
-import React from "react";
 
 interface DropdownNavbarMenuProps {
-    (isServActive: boolean, isHealthActive: boolean): void;
+    setIsDropdownNavActive: Dispatch<SetStateAction<{ servicesDropdown: boolean; healthAndWellnessDropdown: boolean; }>>;
 }
 
-const DropdownNavbarMenu: React.FC<{showOrCollapseDropNav: DropdownNavbarMenuProps}> = (props) => {
+const DropdownNavbarMenu = ({setIsDropdownNavActive}:DropdownNavbarMenuProps) => {
+
+    function showOrCollapseDropNav(isServActive: boolean, isHealthActive: boolean) {
+        setIsDropdownNavActive({
+          healthAndWellnessDropdown: isHealthActive,
+          servicesDropdown: isServActive,
+        })
+    }
 
     const dropdownItens = () => {
         return(menuOptions.map((singleOption) => (
@@ -19,9 +26,10 @@ const DropdownNavbarMenu: React.FC<{showOrCollapseDropNav: DropdownNavbarMenuPro
     };
     
     return (
-        <ul className="dropdown--nav" 
-        onMouseEnter={() => props.showOrCollapseDropNav(true,false)}
-        onMouseLeave={() => props.showOrCollapseDropNav(false,false)}
+        <ul 
+        className="dropdown--nav"
+        onMouseEnter={() => showOrCollapseDropNav(true,false)}
+        onMouseLeave={() => showOrCollapseDropNav(false,false)}
         >
             {dropdownItens()}
         </ul>

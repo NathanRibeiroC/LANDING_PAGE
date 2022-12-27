@@ -1,20 +1,19 @@
-.flex > div{
-    width: calc(100%/3);
-    padding: 10px;
-    align-self: auto;
-}
-
-// .flex > div > img{
-//     margin-top: 10px;
-// }
-
 .nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: .5fr .5fr 1fr .5fr 1fr 2fr .5fr 1fr;
     margin: 0;
     padding: 0;
     width: 100%;
     position: fixed;
+    height: 3em;
+    background-color: white;
+    // white-space: nowrap; 
+
+    div{
+        display: flex;
+        padding: 5px;    
+        justify-content: center;
+        align-items: center;
+    }
 }
