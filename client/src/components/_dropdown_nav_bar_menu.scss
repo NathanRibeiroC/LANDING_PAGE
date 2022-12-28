@@ -29,8 +29,9 @@ $h2-font-color:#8C8482;
         }
     }
 
-    li:hover{
+    li:hover img{
         background-color: aquamarine;
-        border-radius: 5%;
+        padding: .5em;
+        border-radius: 10%;
     }
 }

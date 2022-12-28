@@ -1,23 +1,19 @@
-import {Dispatch, SetStateAction}  from "react";
+import { DropdownNavbarMenuProps } from "../pages/Home";
 import "../components/_secondnav.scss"
 import dropdownArrowImg from "../assets/dropdown-nav-icon.svg";
 import navLogo from "../assets/company-logo.svg";
 
-interface DropdownNavbarMenuProps {
-  setIsDropdownNavActive: Dispatch<SetStateAction<{ servicesDropdown: boolean; healthAndWellnessDropdown: boolean; }>>;
-}
+const SecondNavbar = (showOrCollapseDropNav: DropdownNavbarMenuProps) => {
 
-const SecondNavbar = ({setIsDropdownNavActive}:DropdownNavbarMenuProps) => {
-
-  function showOrCollapseDropNav(isServActive: boolean, isHealthActive: boolean) {
-      setIsDropdownNavActive({
-        healthAndWellnessDropdown: isHealthActive,
-        servicesDropdown: isServActive,
-      })
-  }
+  // function showOrCollapseDropNav(isServActive: boolean, isHealthActive: boolean) {
+  //     setIsDropdownNavActive({
+  //       healthAndWellnessDropdown: isHealthActive,
+  //       servicesDropdown: isServActive,
+  //     })
+  // }
 
   return (
-    <div className="nav flex"
+    <div className="nav"
     onMouseLeave={() => showOrCollapseDropNav(false, false)}
     >
         <div 
@@ -27,6 +23,7 @@ const SecondNavbar = ({setIsDropdownNavActive}:DropdownNavbarMenuProps) => {
             <img src={navLogo} className="logo"></img>
         </div>
         <div
+          className="service-tab"
           onMouseEnter={() => showOrCollapseDropNav(true, false)}
           // onMouseLeave={() => showOrCollapseDropNav(false, false)}
         >

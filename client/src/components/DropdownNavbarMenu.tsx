@@ -1,19 +1,18 @@
-import {Dispatch, SetStateAction}  from "react";
 import menuOptions from '../data/services-options.json';
+// import { DropdownNavbarMenuProps } from "../pages/Home";
 import '../components/_dropdown_nav_bar_menu.scss';
+import { DropdownNavbarMenuProps } from "../pages/Home";
 
-interface DropdownNavbarMenuProps {
-    setIsDropdownNavActive: Dispatch<SetStateAction<{ servicesDropdown: boolean; healthAndWellnessDropdown: boolean; }>>;
-}
+const DropdownNavbarMenu = (showOrCollapseDropNav: DropdownNavbarMenuProps) => {
 
-const DropdownNavbarMenu = ({setIsDropdownNavActive}:DropdownNavbarMenuProps) => {
+    // function showOrCollapseDropNav(isServActive: boolean, isHealthActive: boolean) {
+    //     setIsDropdownNavActive({
+    //       healthAndWellnessDropdown: isHealthActive,
+    //       servicesDropdown: isServActive,
+    //     })
+    // }
 
-    function showOrCollapseDropNav(isServActive: boolean, isHealthActive: boolean) {
-        setIsDropdownNavActive({
-          healthAndWellnessDropdown: isHealthActive,
-          servicesDropdown: isServActive,
-        })
-    }
+    console.log(showOrCollapseDropNav)
 
     const dropdownItens = () => {
         return(menuOptions.map((singleOption) => (
