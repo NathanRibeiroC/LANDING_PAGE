@@ -3,14 +3,7 @@ import "../components/_secondnav.scss"
 import dropdownArrowImg from "../assets/dropdown-nav-icon.svg";
 import navLogo from "../assets/company-logo.svg";
 
-const SecondNavbar = (showOrCollapseDropNav: DropdownNavbarMenuProps) => {
-
-  // function showOrCollapseDropNav(isServActive: boolean, isHealthActive: boolean) {
-  //     setIsDropdownNavActive({
-  //       healthAndWellnessDropdown: isHealthActive,
-  //       servicesDropdown: isServActive,
-  //     })
-  // }
+const SecondNavbar = ({showOrCollapseDropNav}: DropdownNavbarMenuProps) => {
 
   return (
     <div className="nav"

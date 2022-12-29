@@ -1,18 +1,8 @@
 import menuOptions from '../data/services-options.json';
-// import { DropdownNavbarMenuProps } from "../pages/Home";
 import '../components/_dropdown_nav_bar_menu.scss';
 import { DropdownNavbarMenuProps } from "../pages/Home";
 
-const DropdownNavbarMenu = (showOrCollapseDropNav: DropdownNavbarMenuProps) => {
-
-    // function showOrCollapseDropNav(isServActive: boolean, isHealthActive: boolean) {
-    //     setIsDropdownNavActive({
-    //       healthAndWellnessDropdown: isHealthActive,
-    //       servicesDropdown: isServActive,
-    //     })
-    // }
-
-    console.log(showOrCollapseDropNav)
+const DropdownNavbarMenu = ({showOrCollapseDropNav}: DropdownNavbarMenuProps) => {
 
     const dropdownItens = () => {
         return(menuOptions.map((singleOption) => (

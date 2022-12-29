@@ -14,19 +14,19 @@ const Home = () => {
     healthAndWellnessDropdown: false,
   });
 
-  function showOrCollapseDropNav(isServActive: boolean, isHealthActive: boolean) {
+  function showOrCollapseDropNav(isServActive: boolean, isHealthActive: boolean): void {
     setIsDropdownNavActive({
       healthAndWellnessDropdown: isHealthActive,
       servicesDropdown: isServActive,
     })
   }
 
-  // console.log(typeof(showOrCollapseDropNav))
-
   return (
     <React.Fragment>
-        <SecondNavbar showOrCollapseDropNav={showOrCollapseDropNav}></SecondNavbar>
-        {isDropdownNavActive.servicesDropdown ? <DropdownNavbarMenu showOrCollapseDropNav={showOrCollapseDropNav}></DropdownNavbarMenu> : ""}
+        <SecondNavbar showOrCollapseDropNav={showOrCollapseDropNav}/>
+        {isDropdownNavActive.servicesDropdown ? 
+        <DropdownNavbarMenu showOrCollapseDropNav={showOrCollapseDropNav}/>
+        : ""}
     </React.Fragment>
   );
 };
