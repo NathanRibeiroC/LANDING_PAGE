@@ -16,6 +16,7 @@ const DropdownNavbarMenu = ({showOrCollapseDropNav}: DropdownNavbarMenuProps) =>
     
     return (
         <ul 
+        role="dropdown-nav"
         className="dropdown--nav"
         onMouseEnter={() => showOrCollapseDropNav(true,false)}
         onMouseLeave={() => showOrCollapseDropNav(false,false)}
