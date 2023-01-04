@@ -1,8 +1,10 @@
-import MainNavbar from "../../components/Navbar";
 import React, { useState } from 'react'
 import DropdownNavbarMenu from "../../components/DropdownNavbarMenu";
-import Abc from "../../components/Abc";
-import SecondNavbar from "../../components/SecondNav";
+import SecondNavbar from "../../components/MainNav";
+import HomeForm from "../../components/ContactSection";
+import waveBackground from "../../../public/wave.svg"
+import "./_home.scss"
+import WhySection from '../../components/WhySection';
 
 const Home = () => {
 
@@ -24,9 +26,12 @@ const Home = () => {
   return (
     <React.Fragment>
         <SecondNavbar showOrCollapseDropNav={showOrCollapseDropNav}/>
-        {isDropdownNavActive.servicesDropdown ? 
-        <DropdownNavbarMenu showOrCollapseDropNav={showOrCollapseDropNav}/>
+        {isDropdownNavActive.servicesDropdown||isDropdownNavActive.healthAndWellnessDropdown ? 
+        <DropdownNavbarMenu servicesDropdown={isDropdownNavActive.servicesDropdown} healthAndWellnessDropdown={isDropdownNavActive.healthAndWellnessDropdown} showOrCollapseDropNav={showOrCollapseDropNav}/>
         : ""}
+        <HomeForm/>
+        <img src={waveBackground} className={"wave-form"}/>
+        <WhySection/>
     </React.Fragment>
   );
 };

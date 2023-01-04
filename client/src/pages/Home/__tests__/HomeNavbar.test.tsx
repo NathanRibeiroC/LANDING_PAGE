@@ -25,12 +25,28 @@ test('Testing navbar expantion for Services option', async () => {
   expect(screen.getByText("Exchange")).toBeInTheDocument()
 })
 
-// describe('something truthy and falsy', () => {
-//   it('true to be true', () => {
-//     expect(true).toBe(true);
-//   });
+describe('something truthy and falsy', () => {
+  const navOptions = ["Services","Credit Cards"];
 
-//   it('false to be false', () => {
-//     expect(false).toBe(false);
-//   });
-// });
+  it('Testing navbar expantion for Services option', async () => {
+
+    const {user} = renderWithRouter(<App />)
+
+    expect(screen.getByText(navOptions[0])).toBeInTheDocument()
+  
+    await user.click(screen.getByText(navOptions[0]))
+  
+    expect(screen.getByText("Exchange")).toBeInTheDocument()
+  })
+
+  it('Testing navbar expantion for Health And Services option', async () => {
+
+    const {user} = renderWithRouter(<App />)
+
+    expect(screen.getByText(navOptions[1])).toBeInTheDocument()
+  
+    await user.click(screen.getByText(navOptions[1]))
+  
+    expect(screen.getByText("Premium")).toBeInTheDocument()
+  })
+});

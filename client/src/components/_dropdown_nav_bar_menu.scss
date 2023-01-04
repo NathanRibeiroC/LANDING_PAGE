@@ -1,3 +1,5 @@
+@use "../components/navbar";
+
 $h1-font-size: 20px;
 $h1-font-color:#3F3634;
 $h2-font-size: 18px;
@@ -6,13 +8,15 @@ $h2-font-color:#8C8482;
 .dropdown--nav{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     list-style-type: none;
     display: relative;
     background-color: white;
-    height: 10em;
-    margin: 0;
-    padding: 3em 0 0 0;
+    height: 7em;
+    margin-top: navbar.$main-nav-height;
+    padding: 1em 0 .5em 0;
+    position: fixed;
+    width: 100%;
 
     li{
         top: 1px;

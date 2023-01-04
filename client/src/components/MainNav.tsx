@@ -1,9 +1,9 @@
-import { DropdownNavbarMenuProps } from "../pages/Home";
-import "../components/_secondnav.scss"
+import { NavbarMenuProps } from "../pages/Home";
+import "../components/_navbar.scss"
 import dropdownArrowImg from "../assets/dropdown-nav-icon.svg";
 import navLogo from "../assets/company-logo.svg";
 
-const SecondNavbar = ({showOrCollapseDropNav}: DropdownNavbarMenuProps) => {
+const SecondNavbar = ({showOrCollapseDropNav}: NavbarMenuProps) => {
 
   return (
     <div className="nav"
@@ -16,7 +16,7 @@ const SecondNavbar = ({showOrCollapseDropNav}: DropdownNavbarMenuProps) => {
             <img src={navLogo} className="logo"></img>
         </div>
         <div
-          className="service-tab"
+          className="drop-tab"
           onMouseEnter={() => showOrCollapseDropNav(true, false)}
           // onMouseLeave={() => showOrCollapseDropNav(false, false)}
         >
@@ -24,13 +24,16 @@ const SecondNavbar = ({showOrCollapseDropNav}: DropdownNavbarMenuProps) => {
             <img src={dropdownArrowImg} className="dropdown-arrow"></img>
         </div>
         <div
+          className="drop-tab"
           onMouseEnter={() => showOrCollapseDropNav(false, true)}
           // onMouseLeave={() => showOrCollapseDropNav(false, false)}
         >
             <span>Health & Wellness</span>
             <img src={dropdownArrowImg} className="dropdown-arrow"></img>
         </div>
-        <div>
+        <div
+         onMouseEnter={() => showOrCollapseDropNav(false, false)}
+        >
             <span>Resources</span>
         </div>
         <div>
