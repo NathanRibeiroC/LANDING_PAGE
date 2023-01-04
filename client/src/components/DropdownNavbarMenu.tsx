@@ -1,7 +1,5 @@
 import servicesNavOptions from "../data/services-options.json";
 import healthNavOptions from "../data/health-options.json";
-import menuOptions from "../data/services-options.json";
-import React, { useState } from "react";
 import "../components/_dropdown_nav_bar_menu.scss";
 import { NavbarMenuProps } from "../pages/Home";
 

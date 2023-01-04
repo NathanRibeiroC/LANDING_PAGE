@@ -1,21 +1,21 @@
 @use "../components/navbar";
 
-// body{
-//     background-image: url("../../public/wave.svg");
-//     min-height: 700px;
-//     background-repeat: no-repeat;
-// }
-
 .home-div{
     padding-top: navbar.$main-nav-height;
     margin-bottom: -5px;
     height: 30em;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(161,156,156,1) 84%, rgba(0,0,0,1) 100%);
+
+    h1{
+        font-size: 60px;
+        color: #FFB13B;
+    }
+
+    h2{
+        font-size: 30px;
+        color: #FFB13B;
+    }
 }
 
-// .con{
-//     height: 50px;
-//     width: 50px;
-    
-//     background-color: white;
-// }
+
+
