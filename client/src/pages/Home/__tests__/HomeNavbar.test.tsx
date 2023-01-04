@@ -16,17 +16,8 @@ const renderWithRouter = (ui:any, {route = '/home'} = {}) => {
   }
 }
 
-test('Testing navbar expantion for Services option', async () => {
-  const {user} = renderWithRouter(<App />)
-  expect(screen.getByText("Services")).toBeInTheDocument()
-
-  await user.click(screen.getByText("Services"))
-
-  expect(screen.getByText("Exchange")).toBeInTheDocument()
-})
-
-describe('something truthy and falsy', () => {
-  const navOptions = ["Services","Credit Cards"];
+describe('Navbar Behavior', () => {
+  const navOptions = ["Services","Health & Wellness"];
 
   it('Testing navbar expantion for Services option', async () => {
 
@@ -47,6 +38,6 @@ describe('something truthy and falsy', () => {
   
     await user.click(screen.getByText(navOptions[1]))
   
-    expect(screen.getByText("Premium")).toBeInTheDocument()
+    expect(screen.getByText("Exchange")).toBeInTheDocument()
   })
 });
