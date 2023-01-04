@@ -1,0 +1,17 @@
+[
+    {
+        "img_file_name": "../../public/exchange-icon.svg",
+        "main_text": "Exchange",
+        "secondary_test": "Daily rates"
+    },
+    {
+        "img_file_name": "../../public/cripto-icon.svg",
+        "main_text": "Crypto",
+        "secondary_test": "Crypto trends"
+    },
+    {
+        "img_file_name": "../../public/category-icon.svg",
+        "main_text": "Forex",
+        "secondary_test": "Forex rates"
+    }
+]

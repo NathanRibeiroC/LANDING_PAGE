@@ -1,16 +1,37 @@
-import MainNavbar from "../../components/Navbar";
 import React, { useState } from 'react'
 import DropdownNavbarMenu from "../../components/DropdownNavbarMenu";
-import Abc from "../../components/Abc";
-import SecondNavbar from "../../components/SecondNav";
+import SecondNavbar from "../../components/MainNav";
+import HomeForm from "../../components/ContactSection";
+import waveBackground from "../../../public/wave.svg"
+import "./_home.scss"
+import WhySection from '../../components/WhySection';
 
-const Home: React.FC = () => {
+const Home = () => {
+
+  const [isDropdownNavActive, setIsDropdownNavActive] = useState<{
+    servicesDropdown: boolean;
+    healthAndWellnessDropdown: boolean;
+  }>({
+    servicesDropdown: false,
+    healthAndWellnessDropdown: false,
+  });
+
+  function showOrCollapseDropNav(isServActive: boolean, isHealthActive: boolean): void {
+    setIsDropdownNavActive({
+      healthAndWellnessDropdown: isHealthActive,
+      servicesDropdown: isServActive,
+    })
+  }
 
   return (
     <React.Fragment>
-        {/* <MainNavbar></MainNavbar>  */}
-        {/* <Abc></Abc> */}
-        <SecondNavbar></SecondNavbar>
+        <SecondNavbar showOrCollapseDropNav={showOrCollapseDropNav}/>
+        {isDropdownNavActive.servicesDropdown||isDropdownNavActive.healthAndWellnessDropdown ? 
+        <DropdownNavbarMenu servicesDropdown={isDropdownNavActive.servicesDropdown} healthAndWellnessDropdown={isDropdownNavActive.healthAndWellnessDropdown} showOrCollapseDropNav={showOrCollapseDropNav}/>
+        : ""}
+        <HomeForm/>
+        <img src={waveBackground} className={"wave-form"}/>
+        <WhySection/>
     </React.Fragment>
   );
 };
