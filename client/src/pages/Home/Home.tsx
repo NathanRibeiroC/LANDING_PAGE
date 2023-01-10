@@ -5,7 +5,7 @@ import HomeForm from "../../components/ContactSection";
 import waveBackground from "../../../public/wave.svg"
 import "./_home.scss"
 import WhySection from '../../components/WhySection';
-import ContactForm from '../../components/ContactForm';
+import ContactForm from '../../components/ContactForm/ContactForm';
 
 const Home = () => {
 
