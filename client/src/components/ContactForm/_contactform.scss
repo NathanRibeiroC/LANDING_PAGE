@@ -1,0 +1,177 @@
+$border-color: rgb(209,209,209);
+$default-form-font-color: rgb(114, 114, 114);
+$input-color: #727272;
+$input-background-color: white;
+
+.contact-form{
+    h1{
+        font-size: 18px;
+        color: $default-form-font-color;
+    }
+
+    p{
+        color: $default-form-font-color;
+    }
+}
+
+.test{
+    color: red;
+}
+
+.form-input{
+    border-radius: 8px;
+    background-color: $input-background-color;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $border-color;
+    font-size: 20px;
+    padding: 10px;
+    color: $input-color;
+    transition: all .3s ease-in-out;
+}
+
+//FORM-INPUTS
+
+.form-input:focus{
+    outline: none;  
+}
+
+.form-input::placeholder{
+    color: $border-color;  
+}
+
+.form-input:focus{
+    border: 1px solid #349AF0;
+    box-shadow: 1px 1px 6px -1px #349AF0, -1px -1px 6px -1px #349AF0; 
+}
+
+//COPYRIGHT TERMS
+
+.use-terms{
+  font-size: 14px;
+}
+
+.use-terms:link{
+    text-decoration: none; 
+}
+
+//CHECKBOX
+/* Customize the label (the container) */
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: .8em;
+    margin-bottom: .5em;
+    cursor: pointer;
+    color: $default-form-font-color;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    outline: 1px solid #1e5180;
+    background-color: $input-background-color;
+    border-radius: 10%;
+  }
+
+  .check-label{
+    text-decoration: none; 
+    color: #349AF0;
+    opacity: 1;
+  }
+
+  .checkmark{
+    height: 10px;
+    width: 10px;
+    top: 10px;
+  }
+
+  .container:hover input ~ .checkmark {
+    background-color: $input-background-color;
+    outline: 1px solid $input-color;
+    border-radius: 10%;
+  }
+
+  .container input:checked ~ .checkmark {
+    background-color: #2196F3;
+    outline: 1px solid $input-color;
+    border-radius: 10%;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 3px;
+    top: 1px;
+    width: 2.5px;
+    height: 5px;
+    border: solid $input-background-color;
+    border-width: 0 1.5px 1.5px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .check-text{
+    font-size: 14px;
+  }
+
+  .inline-link{
+    text-decoration: none;
+    color: #2196F3;
+    opacity: 1;
+  }
+
+// QR CODE FORM
+.qr-container {
+
+  background-color: $input-background-color;
+  height: 140px;
+  width: 125px;
+  padding: 20px 5px 0px;
+  border-radius: 3%;
+
+  img{
+    width: 120px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+  }
+
+  span{
+    font-size: 14px;
+    color: $input-color;
+    width: 120px;
+    padding-right: 5px;
+    // flex-wrap: wrap;
+    width: 30px;
+  }
+}
+  
+  

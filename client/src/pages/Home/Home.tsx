@@ -5,6 +5,7 @@ import HomeForm from "../../components/ContactSection";
 import waveBackground from "../../../public/wave.svg"
 import "./_home.scss"
 import WhySection from '../../components/WhySection';
+import ContactForm from '../../components/ContactForm/ContactForm';
 
 const Home = () => {
 
@@ -25,13 +26,14 @@ const Home = () => {
 
   return (
     <React.Fragment>
-        <SecondNavbar showOrCollapseDropNav={showOrCollapseDropNav}/>
-        {isDropdownNavActive.servicesDropdown||isDropdownNavActive.healthAndWellnessDropdown ? 
+        {/* <SecondNavbar showOrCollapseDropNav={showOrCollapseDropNav}/> */}
+        {/* {isDropdownNavActive.servicesDropdown||isDropdownNavActive.healthAndWellnessDropdown ? 
         <DropdownNavbarMenu servicesDropdown={isDropdownNavActive.servicesDropdown} healthAndWellnessDropdown={isDropdownNavActive.healthAndWellnessDropdown} showOrCollapseDropNav={showOrCollapseDropNav}/>
-        : ""}
-        <HomeForm/>
-        <img src={waveBackground} className={"wave-form"}/>
-        <WhySection/>
+        : ""} */}
+        {/* <HomeForm/> */}
+        {/* <img src={waveBackground} className={"wave-form"}/> */}
+        {/* <WhySection/> */}
+        <ContactForm/>
     </React.Fragment>
   );
 };
