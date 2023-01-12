@@ -1,10 +1,16 @@
 @use "../components/navbar";
 
-.home-div{
+.contact-section-div{
+
     padding-top: navbar.$main-nav-height;
     margin-bottom: -5px;
     height: 30em;
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(161,156,156,1) 84%, rgba(0,0,0,1) 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 8em;
+    row-gap: 1em;
+    justify-items: center;
 
     h1{
         font-size: 60px;
@@ -14,6 +20,7 @@
     h2{
         font-size: 30px;
         color: #FFB13B;
+        max-width: 552px;
     }
 }
 
