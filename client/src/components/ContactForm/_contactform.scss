@@ -1,21 +1,51 @@
 $border-color: rgb(209,209,209);
-$default-form-font-color: rgb(114, 114, 114);
+$checkbox-background-color:#2196F3;
+$link-text-color: #FFB13B;
 $input-color: #727272;
 $input-background-color: white;
+$form-color:#F5F5F5;
+$form-header-color: #727272;
+$form-paragraph-color: #727272;
+$form-background-color: #F5F5F5;
+$form-input-border-shine-color: #349AF0;
+$form-button-background-color: #faab43;
+$form-button-text-color: white;
 
 .contact-form{
+    height: 600px;
+    width: 430px;
+    padding: 20px 15px;
+    border-radius: 1%;
+    overflow: hidden;
+    //DISPLAY GRID
+    display: grid;
+    column-gap: .8em;
+    row-gap: 0;
+    grid-template-columns: 1fr 0.5fr;
+    background-color: $form-background-color;
+
+    //BOX SHADOW
+    -webkit-box-shadow: -1px 11px 21px 4px rgba(0,0,0,0.22);
+    -moz-box-shadow: -1px 11px 21px 4px rgba(0,0,0,0.22);
+    box-shadow: -1px 11px 21px 4px rgba(0,0,0,0.22);
+
     h1{
         font-size: 18px;
-        color: $default-form-font-color;
+        color: $form-header-color;
     }
 
     p{
-        color: $default-form-font-color;
+        color: $form-paragraph-color;
+    }
+
+    //ALL INPUTS
+    input:nth-child(n){
+      grid-column-start: 1;
     }
 }
 
-.test{
-    color: red;
+.grid-col-span-2{
+  grid-column: span 2;
 }
 
 .form-input{
@@ -41,8 +71,14 @@ $input-background-color: white;
 }
 
 .form-input:focus{
-    border: 1px solid #349AF0;
-    box-shadow: 1px 1px 6px -1px #349AF0, -1px -1px 6px -1px #349AF0; 
+    border: 1px solid $form-input-border-shine-color;
+    box-shadow: 1px 1px 6px -1px $form-input-border-shine-color, -1px -1px 6px -1px $form-input-border-shine-color; 
+}
+
+.contact-form-input-and-qr-div{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
 }
 
 //COPYRIGHT TERMS
@@ -59,16 +95,19 @@ $input-background-color: white;
 /* Customize the label (the container) */
 
 .container {
+    margin: 0;
+    padding-bottom: 0;
+    padding-top: 0;
     display: block;
     position: relative;
     padding-left: .8em;
-    margin-bottom: .5em;
     cursor: pointer;
-    color: $default-form-font-color;
+    color: $link-text-color;
     font-size: 22px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    z-index: 0;
   }
   
   /* Hide the browser's default checkbox */
@@ -90,12 +129,6 @@ $input-background-color: white;
     border-radius: 10%;
   }
 
-  .check-label{
-    text-decoration: none; 
-    color: #349AF0;
-    opacity: 1;
-  }
-
   .checkmark{
     height: 10px;
     width: 10px;
@@ -109,7 +142,7 @@ $input-background-color: white;
   }
 
   .container input:checked ~ .checkmark {
-    background-color: #2196F3;
+    background-color: $checkbox-background-color;
     outline: 1px solid $input-color;
     border-radius: 10%;
   }
@@ -126,7 +159,7 @@ $input-background-color: white;
   }
 
   /* Style the checkmark/indicator */
-.container .checkmark:after {
+  .container .checkmark:after {
     left: 3px;
     top: 1px;
     width: 2.5px;
@@ -140,22 +173,25 @@ $input-background-color: white;
 
   .check-text{
     font-size: 14px;
+    margin: 0;
+    padding: 0;
+    color: $form-paragraph-color;
   }
 
   .inline-link{
     text-decoration: none;
-    color: #2196F3;
+    color: $link-text-color;
     opacity: 1;
   }
 
 // QR CODE FORM
 .qr-container {
-
   background-color: $input-background-color;
   height: 140px;
   width: 125px;
   padding: 20px 5px 0px;
   border-radius: 3%;
+  margin-bottom: .5em;
 
   img{
     width: 120px;
@@ -173,5 +209,23 @@ $input-background-color: white;
     width: 30px;
   }
 }
+
+// FORM BUTTON
+
+.contact-form-button{
+  border-radius: 5px;
+  padding: 0;
+  border: none;
+  padding: 10px 24px;
+  font-size: 16px;
+  color: $form-button-text-color;
+  background-color: $form-button-background-color;
+  cursor: pointer;
+  align-content: flex-end;
+  align-self: flex-start;
+}
   
-  
+.contact-form-button-container{
+  display: flex;
+  flex-direction: row;
+}
