@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import DropdownNavbarMenu from "../../components/DropdownNavbarMenu";
-import SecondNavbar from "../../components/MainNav";
-import HomeForm from "../../components/ContactSection";
-import waveBackground from "../../../public/wave.svg"
+import DropdownNavbarMenu from "../../components/Navbar/DropdownNavbarMenu";
+import SecondNavbar from "../../components/Navbar/MainNav";
+import HomeForm from "../../components/HomePageSections/ContactSection";
 import "./_home.scss"
-import WhySection from '../../components/WhySection';
+import WhySection from '../../components/HomePageSections/WhySection';
 
 const Home = () => {
 

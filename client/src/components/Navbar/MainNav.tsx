@@ -1,7 +1,7 @@
-import { NavbarMenuProps } from "../pages/Home";
-import "../components/_navbar.scss"
-import dropdownArrowImg from "../assets/dropdown-nav-icon.svg";
-import navLogo from "../assets/company-logo.svg";
+import { NavbarMenuProps } from "../../pages/Home";
+import "./_navbar.scss"
+import dropdownArrowImg from "../../assets/dropdown-nav-icon.svg";
+import navLogo from "../../assets/company-logo.svg";
 
 const SecondNavbar = ({showOrCollapseDropNav}: NavbarMenuProps) => {
 
