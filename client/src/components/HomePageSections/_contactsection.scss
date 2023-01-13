@@ -11,16 +11,17 @@
     display: grid;
     grid-template-columns: 1fr;
     padding-top: 8em;
-    padding-bottom: 4em;
+    padding-left: 18em;
+    padding-bottom: 3.7em;
     row-gap: 0;
-    justify-items: center;
+    justify-items: left;
 
     h1{
         font-size: 60px;
         color: #FFB13B;
     }
 
-    h2{
+    h3{
         font-size: 30px;
         color: #FFB13B;
         max-width: 552px;

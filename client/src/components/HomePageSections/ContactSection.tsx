@@ -2,7 +2,6 @@
 import "./_contactsection.scss"
 import ContactForm from "../ContactForm/ContactForm";
 
-
 const HomeForm = () => {
 
   return (
@@ -10,7 +9,7 @@ const HomeForm = () => {
       <div className="contact-section-content">
         <div>
         <h1>Become a Dog<br/>Walker with Wag !</h1>
-        <h2>Join our community of over 400k Pet Caregivers nationwide</h2>
+        <h3>Join our community of over 400k Pet Caregivers nationwide</h3>
         </div>
         <ContactForm/>
       </div>
