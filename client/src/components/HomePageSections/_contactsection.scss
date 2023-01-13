@@ -1,0 +1,37 @@
+@use "../Navbar/navbar";
+
+.contact-section-div{
+
+    // padding-top: navbar.$main-nav-height;
+    // padding-left: 8em;
+    width: 100%;
+    // margin-bottom: -5px;
+    // height: 40em;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(161,156,156,1) 84%, rgba(0,0,0,1) 100%);
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 8em;
+    padding-bottom: 4em;
+    row-gap: 0;
+    justify-items: center;
+
+    h1{
+        font-size: 60px;
+        color: #FFB13B;
+    }
+
+    h2{
+        font-size: 30px;
+        color: #FFB13B;
+        max-width: 552px;
+    }
+}
+
+.contact-section-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 6em;
+}
+
+
+
